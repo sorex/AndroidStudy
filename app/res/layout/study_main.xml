@@ -17,11 +17,18 @@
                 android:onClick="GoBackHandler"/>
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/close"
+            android:id="@+id/Close"
+            android:onClick="CloseHandler"/>
+
+        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/close"
-                android:id="@+id/Close"
-                android:onClick="CloseHandler"/>
+                android:text="@string/study_add_view_by_code"
+                android:id="@+id/AddViewByCode"
+                android:onClick="AddViewByCodeHandler"/>
 
     </LinearLayout>
 </ScrollView>

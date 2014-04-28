@@ -4,4 +4,6 @@
     <string name="go_to_study">Go To Study</string>
     <string name="close">Close</string>
     <string name="go_back">Go Back</string>
+    <string name="run">Run</string>
+    <string name="study_add_view_by_code">Add View By Code</string>
 </resources>
