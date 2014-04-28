@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MainActivity</string>
+    <string name="go_to_study">Go To Study</string>
+    <string name="close">Close</string>
+    <string name="go_back">Go Back</string>
+</resources>

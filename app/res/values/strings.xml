@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MainActivity</string>
+    <string name="go_to_study">打开Study页面</string>
+    <string name="close">关闭</string>
+    <string name="go_back">返回</string>
+</resources>
