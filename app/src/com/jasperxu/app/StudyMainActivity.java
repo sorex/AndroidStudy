@@ -31,10 +31,28 @@ public class StudyMainActivity extends Activity {
 
     public void AddViewByCodeHandler(View view)
     {
-        Intent intent = new Intent();
-        intent.setClass(StudyMainActivity.this, AddViewByCodeActivity.class);
-        startActivity(intent);
+//        //写法一，创建Intent
+//        Intent intent = new Intent();
+//        intent.setClass(StudyMainActivity.this, AddViewByCodeActivity.class);
+//        startActivity(intent);
+
+        //写法二，直接调用startActivity
+        startActivity(new Intent(this, AddViewByCodeActivity.class));
+
+
+        overridePendingTransition(R.anim.move_in_left, R.anim.move_out_left);
+
+
         //如果不关闭当前的会出现好多个页面
-        StudyMainActivity.this.finish();
+        finish();
+
+
+//        Intent intent = new Intent();
+//        intent.setClass(Bmi.this, Report.class);
+//        Bundle bundle = new Bundle();   //bundle带参数跳转
+//        bundle.putString("KEY_HEIGHT",field_height.getText().toString());
+//        bundle.putString("KEY_WEIGHT",field_weight.getText().toString());
+//        intent.putExtras(bundle);
+//        startActivity(intent);
     }
 }
