@@ -6,4 +6,5 @@
     <string name="go_back">返回</string>
     <string name="run">运行</string>
     <string name="study_add_view_by_code">用代码添加控件</string>
+    <string name="study_download_file">下载文件</string>
 </resources>

@@ -25,11 +25,9 @@ public class AddViewByCodeActivity extends Activity {
 
 
     public void GoBackHandler(View view) {
-        Intent intent = new Intent();
-        intent.setClass(AddViewByCodeActivity.this, StudyMainActivity.class);
-        startActivity(intent);
-        //如果不关闭当前的会出现好多个页面
-        AddViewByCodeActivity.this.finish();
+        startActivity(new Intent(this, StudyMainActivity.class));
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        finish();
     }
 
     public void RunHandler(View view) {

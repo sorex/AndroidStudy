@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.jasperxu.app.study.AddViewByCodeActivity;
+import com.jasperxu.app.study.DownloadFileActivity;
 
 /**
  * Created by Jasper on 2014/4/28.
@@ -17,11 +18,9 @@ public class StudyMainActivity extends Activity {
 
     public void GoBackHandler(View view)
     {
-        Intent intent = new Intent();
-        intent.setClass(StudyMainActivity.this, MainActivity.class);
-        startActivity(intent);
-        //如果不关闭当前的会出现好多个页面
-        StudyMainActivity.this.finish();
+        startActivity(new Intent(this, MainActivity.class));
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+        finish();
     }
 
     public void CloseHandler(View view)
@@ -40,7 +39,7 @@ public class StudyMainActivity extends Activity {
         startActivity(new Intent(this, AddViewByCodeActivity.class));
 
 
-        overridePendingTransition(R.anim.move_in_left, R.anim.move_out_left);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
         //如果不关闭当前的会出现好多个页面
@@ -54,5 +53,11 @@ public class StudyMainActivity extends Activity {
 //        bundle.putString("KEY_WEIGHT",field_weight.getText().toString());
 //        intent.putExtras(bundle);
 //        startActivity(intent);
+    }
+
+    public void DownloadFileHandler(View view){
+        startActivity(new Intent(this, DownloadFileActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
     }
 }

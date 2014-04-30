@@ -18,11 +18,9 @@ public class MainActivity extends Activity {
 
     public void GoToStudyHandler(View view)
     {
-        Intent intent = new Intent();
-        intent.setClass(MainActivity.this, StudyMainActivity.class);
-        startActivity(intent);
-        //如果不关闭当前的会出现好多个页面
-        MainActivity.this.finish();
+        startActivity(new Intent(this, StudyMainActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
     }
 
     public void CloseHandler(View view)

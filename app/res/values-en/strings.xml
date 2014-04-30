@@ -6,4 +6,5 @@
     <string name="go_back">Go Back</string>
     <string name="run">Run</string>
     <string name="study_add_view_by_code">Add View By Code</string>
+    <string name="study_download_file">Download File</string>
 </resources>

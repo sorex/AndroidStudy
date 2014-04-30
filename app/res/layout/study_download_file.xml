@@ -17,24 +17,11 @@
                 android:onClick="GoBackHandler"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/close"
-            android:id="@+id/Close"
-            android:onClick="CloseHandler"/>
-
-        <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/study_add_view_by_code"
-                android:id="@+id/AddViewByCode"
-                android:onClick="AddViewByCodeHandler"/>
+                android:text="@string/run"
+                android:id="@+id/Run"
+                android:onClick="RunHandler"/>
 
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/study_download_file"
-                android:id="@+id/DownloadFile"
-                android:onClick="DownloadFileHandler"/>
     </LinearLayout>
 </ScrollView>
