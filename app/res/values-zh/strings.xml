@@ -7,4 +7,6 @@
     <string name="run">运行</string>
     <string name="study_add_view_by_code">用代码添加控件</string>
     <string name="study_download_file">下载文件</string>
+    <string name="study_json_parse">Json 解析</string>
+    <string name="study_sqlite">SQLite</string>
 </resources>

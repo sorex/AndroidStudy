@@ -4,7 +4,7 @@
           android:versionCode="1"
           android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="19"/>
+    <uses-sdk android:minSdkVersion="17"/>
 
     <!--访问网络的权限-->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -31,5 +31,14 @@
         <activity
                 android:name=".study.DownloadFileActivity"
                 android:label="Download File"/>
+        <activity
+                android:name=".study.JsonParseActivity"
+                android:label="Json Parse"/>
+        <activity
+                android:name=".study.SQLiteActivity"
+                android:label="SQLite"/>
+        <activity
+                android:name=".study.FileAndPathActivity"
+                android:label="File And Path"/>
     </application>
 </manifest>

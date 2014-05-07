@@ -30,44 +30,54 @@ public class DownloadFileActivity extends Activity {
     }
 
     public void RunHandler(View view) {
-        String downloadUrl = "http://m.baidu.com/static/index/logo_index2.png";
-        String saveDir = "com.jasperxu.app/";
-        String saveFileName = "logo_index2.png";
+
+        //不可以在UI的主线程中使用网络
+        new Thread(new Runnable() {
+            public void run() {
+                String downloadUrl = "http://m.baidu.com/static/index/logo_index2.png";
+                String saveDir = "com.jasperxu.app/";
+                String saveFileName = "logo_index2.png";
 
 //      获取外置sd卡路径，并加上目录，目录要以/结尾
-        String savePath = Environment.getExternalStorageDirectory() + "/" + saveDir;
+                String savePath = Environment.getExternalStorageDirectory() + "/" + saveDir;
 
-        URL url;
-        HttpURLConnection urlConn = null;
-        InputStream input = null;
+                URL url;
+                HttpURLConnection urlConn = null;
+                InputStream input = null;
 
-        try {
-            url = new URL(downloadUrl);
-            urlConn = (HttpURLConnection) url.openConnection();
-            input = urlConn.getInputStream();
-        } catch (MalformedURLException e) {
-            e.getMessage();
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                try {
+                    url = new URL(downloadUrl);
+                    urlConn = (HttpURLConnection) url.openConnection();
+                    urlConn.setRequestMethod("GET");
+                    urlConn.setConnectTimeout(5000);
+                    urlConn.setDoInput(true);
+                    urlConn.setUseCaches(false);
+                    //urlConn.setRequestProperty("Content-type", "image/png");
+                    urlConn.connect();
+                    input = urlConn.getInputStream();
+                } catch (MalformedURLException e) {
+                    e.getMessage();
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
-        File file = null;
-        OutputStream output = null;
-        try {
+                File file = null;
+                OutputStream output = null;
+                try {
 //          创建目录
-            File dir = new File(savePath);
-            dir.mkdir();
+                    File dir = new File(savePath);
+                    dir.mkdir();
 
 //          创建文件
-            file = new File(savePath + saveFileName);
-            if(file.exists())
-                file.delete();
-            file.createNewFile();
+                    file = new File(savePath + saveFileName);
+                    if (file.exists())
+                        file.delete();
+                    file.createNewFile();
 
-            output = new FileOutputStream(file);
-            int FILESIZE = 4 * 1024;
-            byte[] buffer = new byte[FILESIZE];
+                    output = new FileOutputStream(file);
+                    int FILESIZE = 4 * 1024;
+                    byte[] buffer = new byte[FILESIZE];
 
             /*
             真机测试，这段可能有问题，请采用下面网友提供的
@@ -77,21 +87,23 @@ public class DownloadFileActivity extends Activity {
             */
 
             /* 网友提供 begin */
-            int length;
-            while ((length = (input.read(buffer))) > 0) {
-                output.write(buffer, 0, length);
-            }
+                    int length;
+                    while ((length = (input.read(buffer))) > 0) {
+                        output.write(buffer, 0, length);
+                    }
             /* 网友提供 end */
 
-            output.flush();
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                output.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+                    output.flush();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        output.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }
+        }).start();
     }
 }

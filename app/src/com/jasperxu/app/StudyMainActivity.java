@@ -4,8 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import com.jasperxu.app.study.AddViewByCodeActivity;
-import com.jasperxu.app.study.DownloadFileActivity;
+import com.jasperxu.app.study.*;
 
 /**
  * Created by Jasper on 2014/4/28.
@@ -57,6 +56,17 @@ public class StudyMainActivity extends Activity {
 
     public void DownloadFileHandler(View view){
         startActivity(new Intent(this, DownloadFileActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
+    }
+
+    public void JsonParseHandler(View view){
+        startActivity(new Intent(this, JsonParseActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
+    }
+    public void SQLiteHandler(View view){
+        startActivity(new Intent(this, SQLiteActivity.class));
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         finish();
     }

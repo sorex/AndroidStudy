@@ -36,5 +36,17 @@
                 android:text="@string/study_download_file"
                 android:id="@+id/DownloadFile"
                 android:onClick="DownloadFileHandler"/>
-    </LinearLayout>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_json_parse"
+                android:id="@+id/JsonParse"
+                android:onClick="JsonParseHandler"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_sqlite"
+                android:id="@+id/SQLite"
+                android:onClick="SQLiteHandler"/>   </LinearLayout>
 </ScrollView>
