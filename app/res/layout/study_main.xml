@@ -48,5 +48,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/study_sqlite"
                 android:id="@+id/SQLite"
-                android:onClick="SQLiteHandler"/>   </LinearLayout>
+                android:onClick="SQLiteHandler"/>
+    </LinearLayout>
 </ScrollView>

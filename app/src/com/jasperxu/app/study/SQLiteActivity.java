@@ -62,12 +62,12 @@ public class SQLiteActivity extends Activity {
         }
         CreateSQL += ")";
 
-        String InsertSQL = "INSERT INTO "+ TABLE_NAME +"(";
+        String InsertSQL = "INSERT INTO "+ TABLE_NAME +"(ID, UserName, LoginName, LoginPassword) VALUES('1', '徐磊', 'sorex', 'password');";
 
         db.execSQL(CreateSQL);
         Log.e("Database", "onCreate");
 
-        db.execSQL();
+        db.execSQL(InsertSQL);
 
     }
 }

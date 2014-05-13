@@ -40,5 +40,14 @@
         <activity
                 android:name=".study.FileAndPathActivity"
                 android:label="File And Path"/>
+        <activity
+                android:name=".DemoMainActivity"
+                android:label="Demo"/>
+        <activity
+                android:name=".demo.ContentActivity"
+                android:label="内容"/>
+        <activity
+                android:name=".demo.DirectoryActivity"
+                android:label="目录"/>
     </application>
 </manifest>
