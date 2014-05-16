@@ -49,5 +49,12 @@
                 android:text="@string/study_sqlite"
                 android:id="@+id/SQLite"
                 android:onClick="SQLiteHandler"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/study_gesture"
+                android:id="@+id/Gesture"
+                android:onClick="GestureHandler"/>
     </LinearLayout>
 </ScrollView>

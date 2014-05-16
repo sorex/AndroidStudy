@@ -28,7 +28,9 @@ public class DemoMainActivity extends Activity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getBaseContext(), DirectoryActivity.class));
+                Intent intent = new Intent(getBaseContext(), DirectoryActivity.class);
+                intent.putExtra("BookGuid", "人教版六年级数学下册 GUID");
+                startActivity(intent);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                 finish();
             }

@@ -49,5 +49,8 @@
         <activity
                 android:name=".demo.DirectoryActivity"
                 android:label="目录"/>
+        <activity
+                android:name=".study.GestureActivity"
+                android:label="Gesture"/>
     </application>
 </manifest>

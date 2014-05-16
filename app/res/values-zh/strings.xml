@@ -10,4 +10,5 @@
     <string name="study_json_parse">Json 解析</string>
     <string name="study_sqlite">SQLite</string>
     <string name="go_to_demo">打开DEMO</string>
+    <string name="study_gesture">手势</string>
 </resources>

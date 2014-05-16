@@ -70,4 +70,8 @@ public class StudyMainActivity extends Activity {
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         finish();
     }
-}
+    public void GestureHandler(View view){
+        startActivity(new Intent(this, GestureActivity.class));
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        finish();
+    }}
